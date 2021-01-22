@@ -1,0 +1,27 @@
+**/.terraform/*
+
+*.tfstate
+*.tfstate.*
+
+*.tfvars
+
+kubeconfig*
+
+.terraformrc
+terraform.rc
+
+*.log
+tfplan-**
+**tfplan-**
+
+rendered
+
+.idea/
+.idea
+
+.DS_Store
+
+# cache files
+__pycache__/
+*.pyc
+*.swp
