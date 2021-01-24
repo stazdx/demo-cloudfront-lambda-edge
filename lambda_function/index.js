@@ -8,10 +8,10 @@ exports.handler = (event, context, callback) => {
         value: "max-age=31536000; includeSubdomains; preload"
     }];
 
-    // headers['content-security-policy'] = [{
-    //         key:   'Content-Security-Policy', 
-    //         value: "default-src 'none'; connect-src 'self'; font-src 'self' data: https://fonts.gstatic.com https://maxcdn.bootstrapcdn.com; frame-src 'self' https://accounts.google.com https://staticxx.facebook.com; img-src 'self' data: https:; media-src 'self'; script-src 'self' 'unsafe-inline' https://apis.google.com/ https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/ data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://maxcdn.bootstrapcdn.com/font-awesome/; object-src 'none'"
-    //     }];
+    headers['content-security-policy'] = [{
+        key:   'Content-Security-Policy', 
+        value: "default-src 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; media-src 'self'; script-src 'self'; object-src 'self'"
+    }];
 
     headers['x-content-type-options'] = [{
         key:   'X-Content-Type-Options',
@@ -31,6 +31,11 @@ exports.handler = (event, context, callback) => {
     headers['referrer-policy'] = [{
         key:   'Referrer-Policy',
         value: "same-origin"
+    }];
+
+    headers['Permissions-Policy'] = [{
+        key:   'Permissions-Policy',
+        value: "(self), microphone=()"
     }];
     
     callback(null, response);

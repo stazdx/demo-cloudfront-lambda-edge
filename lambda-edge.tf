@@ -18,13 +18,13 @@ EOF
 resource "aws_lambda_function" "lambda_edge" {
   handler       = "index.handler"
   filename      = "lambda_function.zip"
-  function_name = "cf-demo"
+  function_name = "demo-lambda-edge"
   description   = "cloudfront & Lambda Edge"
   role          = aws_iam_role.lambda_edge_exec.arn
   runtime       = "nodejs12.x"
   publish       = true
 
   tags = {
-    Name = "cf-demo"
+    Name = "demo-lambda-edge"
   }
 }

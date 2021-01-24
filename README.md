@@ -8,9 +8,6 @@
 | aws-cli | >= 2.0.0 | https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html |
 | terraform | >= 0.12.0 | https://www.terraform.io/downloads.html |
 
-Para esta Demo, utilizaremos la instalación en mac utilizando Homebrew
-
-
 ### Clonamos el repositorio
 
 ```sh
@@ -33,6 +30,14 @@ $ terraform plan
 
 # Verificamos nuestro plan generado y lo ejecutamos
 $ terraform apply -auto-approve
+```
+
+### Eliminamos los recursos creados
+
+```sh
+
+$ terraform destroy -auto-approve
+
 ```
 
 Happy coding :smile: !!
